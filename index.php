@@ -22,12 +22,6 @@ class Productos
         curl_close($curl);
         return json_decode($response, true);
     }
-    public function allproductos()
-    {
-        $api = "/admin/api/2022-01/products.json";
-        $resultado = $this->autenticacion($api, 'GET');
-        return $resultado;
-    }
     public function getProductById($id)
     {
         $api = "/admin/api/2022-01/products/" . $id . ".json";
@@ -48,36 +42,38 @@ class Productos
         $resultado = $this->autenticacion($api, 'PUT', "$res");
         return $resultado;
     }
+    public function getOrderById($id)
+    {
+        $api = "/admin/api/2022-01/orders/$id.json";
+        $resultado = $this->autenticacion($api, 'GET');
+        return $resultado;
+    }
+    public function getProducts()
+    {
+        $api = "/admin/api/2022-01/products.json";
+        $resultado = $this->autenticacion($api, 'GET');
+        return $resultado;
+    }
+    public function getCustomerByEmail($email)
+    {
+        $api = "/admin/api/2022-01/customers/search.json?query=email:$email";
+        $resultado = $this->autenticacion($api, 'GET');
+        return $resultado;
+    }
 }
 
 $resultado = new Productos();
 $producto = 7529282044131;
-$res = ['product' => ['title' => 'Camiseta Replote']];
-$respuesta = $resultado->updateProduct($producto, $res);
+$orden = 4640464077027;
+$email = "ferchosh89@gmail.com";
+$respuesta = $resultado->getCustomerByEmail($email);
 echo json_encode($respuesta);
 
 
 /*
 
 
-    public function getOrderById($id)
-    {
-        $api = "/admin/api/2022-01/products.json";
-        $resultado = $this->autenticacion($api);
-        return $resultado;
-    }
-    public function getProducts()
-    {
-        $api = "/admin/api/2022-01/products.json";
-        $resultado = $this->autenticacion($api);
-        return $resultado;
-    }
-    public function getCustomerByEmail($email)
-    {
-        $api = "/admin/api/2022-01/products.json";
-        $resultado = $this->autenticacion($api);
-        return $resultado;
-    }
+    
     public function getCustomerOrders($customerId)
     {
         $api = "/admin/api/2022-01/products.json";
