@@ -1,6 +1,6 @@
 <?php
 
-class Productos
+class Shopify
 {
     private $user = "9fd0d753d2813b2376100d3d4d9b434c";
     private $clave = "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";
@@ -60,13 +60,39 @@ class Productos
         $resultado = $this->autenticacion($api, 'GET');
         return $resultado;
     }
+    public function getCustomerOrders($customerId)
+    {
+        $api = "/admin/api/2022-01/customers/$customerId/orders.json";
+        $resultado = $this->autenticacion($api, 'GET');
+        return $resultado;
+    }
+    public function createCollection($data)
+    {
+        $api = "/admin/api/2022-01/custom_collections.json";
+        $param = json_encode($data);
+        $resultado = $this->autenticacion($api, 'POST', "$param");
+        return $resultado;
+    }
+    public function addToCollection($collectionId, $productId)
+    {
+        $api = "/admin/api/2022-01/collects.json";
+        $data = ['collect' => ['product_id' => $productId, 'collection_id' => $collectionId]];
+        $param = json_encode($data);
+        $resultado = $this->autenticacion($api, 'POST', "$param");
+        return $resultado;
+    }
 }
 
-$resultado = new Productos();
-$producto = 7529282044131;
+$camiseta = 7529282044131;
+$pantalon = 7529926197475;
 $orden = 4640464077027;
 $email = "ferchosh89@gmail.com";
-$respuesta = $resultado->getCustomerByEmail($email);
+$cliente = 6059881496803;
+$coleccion = ['custom_collection' => ['title' => 'Ropa']];
+$idcoleccion = 397570048227;
+
+$resultado = new Shopify();
+$respuesta = $resultado->addToCollection($idcoleccion, $camiseta);
 echo json_encode($respuesta);
 
 
@@ -74,18 +100,7 @@ echo json_encode($respuesta);
 
 
     
-    public function getCustomerOrders($customerId)
-    {
-        $api = "/admin/api/2022-01/products.json";
-        $resultado = $this->autenticacion($api);
-        return $resultado;
-    }
-    public function createCollection($data)
-    {
-        $api = "/admin/api/2022-01/products.json";
-        $resultado = $this->autenticacion($api);
-        return $resultado;
-    }
+    
 
 
 
