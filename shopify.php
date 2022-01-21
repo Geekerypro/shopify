@@ -6,6 +6,11 @@ class Shopify
     private $clave = "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";
     private $tienda = "geekerypro.myshopify.com";
 
+    private function datosConexion(){
+        $direccion = $_SERVER['DOCUMENT_ROOT'].'/shopify/config';
+        $jsonData = file_get_contents($direccion.'config');
+        return json_decode($jsonData, true);
+    }
     private function autenticacion($api, $metodo, $data = '')
     {
         $curl = curl_init();
@@ -24,13 +29,13 @@ class Shopify
     }
     public function getProductById($id)
     {
-        $api = "/admin/api/2022-01/products/" . $id . ".json";
+        $api = "/admin/api/2022-01/products/$id.json";
         $resultado = $this->autenticacion($api, 'GET');
         return  $resultado;
     }
     public function getProductPrice($id)
     {
-        $api = "/admin/api/2022-01/products/" . $id . ".json";
+        $api = "/admin/api/2022-01/products/$id.json";
         $resultado = $this->autenticacion($api, 'GET');
         $precio = $resultado['product']['variants'][0]['price'];
         return $precio;
@@ -92,8 +97,9 @@ $coleccion = ['custom_collection' => ['title' => 'Ropa']];
 $idcoleccion = 397570048227;
 
 $resultado = new Shopify();
-$respuesta = $resultado->addToCollection($idcoleccion, $camiseta);
-echo json_encode($respuesta);
+//$respuesta = $resultado->addToCollection($idcoleccion, $camiseta);
+//echo json_encode($respuesta);
+echo $_SERVER['DOCUMENT_ROOT'];
 
 
 /*
