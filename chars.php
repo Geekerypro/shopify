@@ -1,4 +1,5 @@
 <?php
+
 function charsIguales($string)
 {
     $valores = array_count_values(str_split($string));
@@ -19,6 +20,6 @@ $chars = [
     '000111',
     'abcdefghijklmnñopqrstuvwz'
 ];
-for ($i=0; $i < count($chars); $i++) { 
-    echo $chars[$i]." -- ".charsIguales($chars[$i])."<br>";
+for ($i = 0; $i < count($chars); $i++) {
+    echo $chars[$i] . " -- " . charsIguales($chars[$i]) . "<br>";
 }

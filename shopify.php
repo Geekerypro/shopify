@@ -149,6 +149,10 @@ class Shopify
     }
 }
 
+/*
+
+// ** Datos de prueba **
+
 $camiseta = 7529282044131;
 $pantalon = 7529926197475;
 $orden = 4640464077027;
@@ -157,6 +161,11 @@ $cliente = 6059881496803;
 $coleccion = ['custom_collection' => ['title' => 'Ropa']];
 $idcoleccion = 397570048227;
 
+//Se instancia la clase Shopify
 $resultado = new Shopify();
+//se metodo de la clase
 $respuesta = $resultado->getCustomerByEmail($email);
+//se muestra el resultado en pantalla
 echo json_encode($respuesta);
+
+*/
