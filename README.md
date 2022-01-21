@@ -6,7 +6,7 @@
 Librería de métodos que permite manipular datos de una tienda en linea de Shopify.
 La libreria cuenta con una clase llamada Shopify la cual tiene una serie de metodo que permite hacer la interaccion con la tienda de Shopify
 
-Esta clase se encuentra en el archivo  [shopify/shopify.php](https://github.com/Geekerypro/cafeteria/tree/master/config)
+Esta clase se encuentra en el archivo  [shopify/shopify.php](https://github.com/Geekerypro/shopify/blob/master/shopify.php)
 
 ### Estructura de la Clase
 * Metodo: __construct()
@@ -45,4 +45,4 @@ Esta clase se encuentra en el archivo  [shopify/shopify.php](https://github.com/
 ### Analisis de caracteres
 Esta funcion "charsIguales($string)" analizar si existe la misma cantidad de caracteres repetidos en una cadena de caracteres, la funcion recibe como parametro un string (cadena de caracteres) y devuelve true si el string tiene la misma cantidad de caracteres repetidos de lo contrario devuelve false
 
-Esta funcion se encuentra en el archivo [shopify/chars.php](https://github.com/Geekerypro/cafeteria/tree/master/config)
+Esta funcion se encuentra en el archivo [shopify/chars.php](https://github.com/Geekerypro/shopify/blob/master/chars.php)
