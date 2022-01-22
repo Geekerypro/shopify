@@ -41,8 +41,45 @@ Esta clase se encuentra en el archivo  [shopify/shopify.php](https://github.com/
     Metodo que permite asociar productos a una coleccion este metodo recibe como parametro el id de la coleccion y el id del producto y el metodo asocia el producto a la coleccion y devuel la informacion de la coleccion donde se puede ve el producto que fua asociado
 
 
+### Datos para hacer pruebas
+
+>$idProducto1 = 7529282044131;
+>$idProducto2 = 7529926197475;
+>$idProducto3 = 7530907336931;
+>$idProducto4 = 7530909040867;
+>$idOrden1 = 4640464077027;
+>$idOrden2 = 4641501774051;
+>$idOrden3 = 4640464077027;
+>$email1 = "ferchosh89@gmail.com";
+>$email2 = "feli123@gmail.com";
+>$email3 = "camila345@gmail.com";
+>$email4 = "juan123@gmail.com";
+>$idCliente1 = 6059881496803;
+>$idCliente2 = 6060854608099;
+>$idCliente3 = 6060855623907;
+>$idCliente4 = 6060855001315;
+>$nuevaColeccion1 = ['custom_collection' => ['title' => 'Tecnologia']];
+>$nuevaColeccion2 = ['custom_collection' => ['title' => 'Juegos']];
+>$nuevaColeccion3 = ['custom_collection' => ['title' => 'Hogar']];
+>$idcoleccion = 397570048227;
+
 ## **_Parte II -> Analisis de caracteres repetidos en una cadena de caracteres._**
 ### Analisis de caracteres
 Esta funcion "charsIguales($string)" analizar si existe la misma cantidad de caracteres repetidos en una cadena de caracteres, la funcion recibe como parametro un string (cadena de caracteres) y devuelve true si el string tiene la misma cantidad de caracteres repetidos de lo contrario devuelve false
 
 Esta funcion se encuentra en el archivo [shopify/chars.php](https://github.com/Geekerypro/shopify/blob/master/chars.php)
+
+### Resultado de las pruebas con la funcion "charsIguales($string)"
+
+aaabbbzzz -- true
+xvccvxxvccvx -- true
+uuuiiii -- false
+abcde -- true
+quac -- true
+www -- true
+x -- true
+abb -- false
+AAACCC -- true
+000111 -- true
+abcdefghijklmnñopqrstuvwz -- true
+"" -- true
