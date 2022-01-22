@@ -71,15 +71,15 @@ Esta funcion se encuentra en el archivo [shopify/chars.php](https://github.com/G
 
 ### Resultado de las pruebas con la funcion "charsIguales($string)"
 
-aaabbbzzz -- true
-xvccvxxvccvx -- true
-uuuiiii -- false
-abcde -- true
-quac -- true
-www -- true
-x -- true
-abb -- false
-AAACCC -- true
-000111 -- true
-abcdefghijklmnñopqrstuvwz -- true
-"" -- true
+* aaabbbzzz -- true
+* xvccvxxvccvx -- true
+* uuuiiii -- false
+* abcde -- true
+* quac -- true
+* www -- true
+* x -- true
+* abb -- false
+* AAACCC -- true
+* 000111 -- true
+* abcdefghijklmnñopqrstuvwz -- true
+* "" -- true
