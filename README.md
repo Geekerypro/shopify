@@ -3,6 +3,8 @@
 
 ## **_Parte I -> Conexion a Shopify consumo de API de Shopify_**
 ### Libreria Shopify
+Para crear esta libreria y poder realizar el ejercicio con una tienda real se creo una tienda en shopify y se generaron los accesos de api key y token 
+
 Librería de métodos que permite manipular datos de una tienda en linea de Shopify.
 La libreria cuenta con una clase llamada Shopify la cual tiene una serie de metodo que permite hacer la interaccion con la tienda de Shopify
 
