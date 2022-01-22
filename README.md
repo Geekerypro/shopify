@@ -43,25 +43,25 @@ Esta clase se encuentra en el archivo  [shopify/shopify.php](https://github.com/
 
 ### Datos para hacer pruebas
 
-$idProducto1 = 7529282044131;
-$idProducto2 = 7529926197475;
-$idProducto3 = 7530907336931;
-$idProducto4 = 7530909040867;
-$idOrden1 = 4640464077027;
-$idOrden2 = 4641501774051;
-$idOrden3 = 4640464077027;
-$email1 = "ferchosh89@gmail.com";
-$email2 = "feli123@gmail.com";
-$email3 = "camila345@gmail.com";
-$email4 = "juan123@gmail.com";
-$idCliente1 = 6059881496803;
-$idCliente2 = 6060854608099;
-$idCliente3 = 6060855623907;
-$idCliente4 = 6060855001315;
-$nuevaColeccion1 = ['custom_collection' => ['title' => 'Tecnologia']];
-$nuevaColeccion2 = ['custom_collection' => ['title' => 'Juegos']];
-$nuevaColeccion3 = ['custom_collection' => ['title' => 'Hogar']];
-$idcoleccion = 397570048227;
+* $idProducto1 = 7529282044131;
+* $idProducto2 = 7529926197475;
+* $idProducto3 = 7530907336931;
+* $idProducto4 = 7530909040867;
+* $idOrden1 = 4640464077027;
+* $idOrden2 = 4641501774051;
+* $idOrden3 = 4640464077027;
+* $email1 = "ferchosh89@gmail.com";
+* $email2 = "feli123@gmail.com";
+* $email3 = "camila345@gmail.com";
+* $email4 = "juan123@gmail.com";
+* $idCliente1 = 6059881496803;
+* $idCliente2 = 6060854608099;
+* $idCliente3 = 6060855623907;
+* $idCliente4 = 6060855001315;
+* $nuevaColeccion1 = ['custom_collection' => ['title' => 'Tecnologia']];
+* $nuevaColeccion2 = ['custom_collection' => ['title' => 'Juegos']];
+* $nuevaColeccion3 = ['custom_collection' => ['title' => 'Hogar']];
+* $idcoleccion = 397570048227;
 
 ## **_Parte II -> Analisis de caracteres repetidos en una cadena de caracteres._**
 ### Analisis de caracteres
