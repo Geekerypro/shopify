@@ -1,5 +1,5 @@
 
-# Libreria Shopify Analisis de caracteres
+# Prueba Tecnica: Libreria Shopify y Analisis de caracteres
 
 ## **_Parte I -> Conexion a Shopify consumo de API de Shopify_**
 ### Libreria Shopify
